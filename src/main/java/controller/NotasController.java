@@ -55,7 +55,6 @@ public class NotasController {
     @POST
     public Response createNotas(@Valid Notas notas) {
         notas.fechaCreacion = LocalDate.now();
-        notas.persist();
         notasService.create(notas);
         return Response.status(Response.Status.CREATED).build();
     }
