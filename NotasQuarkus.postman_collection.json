@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "39052d95-a1f9-4c1a-a91e-8ccda4c22b5a",
+		"name": "NotasQuarkus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13042023"
+	},
+	"item": [
+		{
+			"name": "Mostrar notas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar notas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"Matemáticas\",\r\n  \"contenido\": \"Matemáticas de 6to grado\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar nota",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"644884344882c45c743cdbe5\",\r\n        \"titulo\": \"Matemáticas II\",\r\n        \"contenido\": \"Matemáticas II de 6to grado\",\r\n        \"fechaCreacion\": \"2023-04-25\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar nota por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"644884344882c45c743cdbe5\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notas/644874ad3b80dc3b07095518",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas",
+						"644874ad3b80dc3b07095518"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar nota",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"64483a34d345ea4667a48b60\",\r\n        \"titulo\": \"Matematica II\",\r\n        \"contenido\": \"Matematica II de 6to grado\",\r\n        \"fechaCreacion\": \"2023-04-25\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar nota",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"644874ad3b80dc3b07095511\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notas",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
